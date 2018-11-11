@@ -48,7 +48,7 @@ int door_parcent = 100;       // Door open parcent
 bool now_switch1 = false;     // Wall switch1 state
 bool now_switch2 = false;     // Wall switch2 state
 bool ticker_flag = false;     // Every minute
-String version_n = "20181106";// Version of SMK01.ino
+String version_n = "20181110";// Version of SMK01.ino
 
 // Initialize global instance
 MDNSResponder mdns;
@@ -306,7 +306,7 @@ void setup() {
   Serial.println("Ticker start.            [ O K ]");
 
   // Initialize WiFi
-  //WiFi.config(IPAddress(192,168,0,151), IPAddress(192,168,0,1), IPAddress(255,255,255,0));
+  WiFi.mode(WIFI_STA);
   WiFi.begin(ssid, password);
   wifi_connect_wait();
 
